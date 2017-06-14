@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dom Traversal</title>
+    
+    <style>
+		
+		.amazing {
+			font-weight:700;
+			color:blue;
+		}
+		
+    </style>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+  	
+    <div class="container">
+    	<div class="jumbotron">
+        	<center>
+              <h1>DOM Traversal</h1>
+              <button data-section="section1" class="btn btn-primary" id="button1">#button1</button>
+              <button data-section="section2" class="btn btn-info" id="button2">#button2</button>
+              <button data-section="section3" class="btn btn-danger" id="button3">#button3</button>
+              <button data-section="section4" class="btn btn-warning" id="button4">#button4</button>
+            </center>
+        </div> <!---end jumbotron -->
+        
+        <div class="row">
+        	<div class="col-xs-3">
+            	<div id="section1" class="panel panel-primary">
+                	<div class="panel-heading">
+                    #section1
+                    </div>
+                    <div class="panel-body">
+                    	<ul>
+                        	<li>Red</li>
+                            <li>Orange</li>
+                            <li>Yellow</li>
+                            <li>Green</li>
+                        </ul>
+                    </div>
+                </div> <!--end of section one-->
+          	</div> <!--end of col-xs-3 -->
+            
+        	<div class="col-xs-3">
+            	<div id="section2" class="panel panel-info">
+                	<div class="panel-heading">
+                    #section2
+                    </div>
+                    <div class="panel-body">
+                    	<ul>
+                        	<li>Blue</li>
+                            <li>Purple</li>
+                            <li>Brown</li>
+                            <li>Black</li>
+                        </ul>
+                    </div>
+                </div> <!--end of section 2-->
+          	</div> <!--end of col-xs-3 -->
+            
+        	<div class="col-xs-3">
+            	<div id="section3" class="panel panel-danger">
+                	<div class="panel-heading">
+                    #section3
+                    </div>
+                    <div class="panel-body">
+                    	<ul>
+                        	<li>White</li>
+                            <li>Grey</li>
+                            <li>Tan</li>
+                            <li>Gold</li>
+                        </ul>
+                    </div>
+                </div> <!--end of section 3-->
+          	</div> <!--end of col-xs-3 -->
+            
+        	<div class="col-xs-3">
+            	<div id="section4" class="panel panel-warning">
+                	<div class="panel-heading">
+                    #section4
+                    </div>
+                    <div class="panel-body">
+                    	<ul>
+                        	<li>Pink</li>
+                            <li>Turquoise</li>
+                            <li>Teal</li>
+                            <li>Cyan</li>
+                        </ul>
+                    </div>
+                </div> <!--end of section 4-->
+          	</div> <!--end of col-xs-3 -->
+            
+        </div> <!--end of row--->
+        
+    </div> <!--end container -->
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+		
+		$(function() {
+			
+			/*$('li').on('click',function() {
+				
+				$(this).next().remove();
+				
+			});*/
+			
+			/*$('li').on('click',function() {
+				
+				$(this).next().addClass('amazing');
+				
+			});*/
+			
+			$('li').on('click',function() {
+				
+				if($(this).is('.amazing'))
+				{
+					$(this).removeClass('amazing');
+				}
+				else
+				{
+					$(this).addClass('amazing');
+				}
+			})
+			
+		});
+		
+
+		
+    </script>
+    
+  </body>
+</html>

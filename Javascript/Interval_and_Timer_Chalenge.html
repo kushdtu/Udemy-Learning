@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    	<title>Javascript : Intervals and Timeouts</title>
+        
+        <style>
+        </style>
+    </head>
+    
+    <body>
+    	
+        <div id="showtimer"></div>
+        
+        <button onClick="stoptimer()">Stop Time</button>
+        
+    	<script>
+        	
+			//var testinterval = setInterval(function() { alert("This is my interval Alert") }, 1000);
+			
+			//var testtimeout = setTimeout(function() { alert("This is my Timeout Alert") }, 3000);
+			
+			var myinterval = setInterval(function() { timer() }, 1000);
+			
+			var mybutton = document.getElementsByTagName("button")[0];
+			//alert(mybutton.innerHTML);
+			
+			function timer()
+			{
+				var thedate = new Date();
+				var thetime = thedate.toLocaleTimeString();
+				document.getElementById("showtimer").innerHTML = thetime;
+			}
+			
+			function stoptimer()
+			{
+				clearInterval(myinterval);
+				mybutton.innerHTML = "Start Timer";
+				mybutton.setAttribute("onclick", "startTimer()");
+			}
+			
+			function startTimer()
+			{
+				myinterval = setInterval(function() { timer() }, 1000);
+				mybutton.innerHTML = "Stop Timer";
+				mybutton.setAttribute("onclick", "stoptimer()");
+			}
+			
+        </script>
+
+    </body>
+</html>

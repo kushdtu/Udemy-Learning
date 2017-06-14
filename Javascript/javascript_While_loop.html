@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    	<title>Javascript!</title>
+        
+        <style>
+        </style>
+    </head>
+    
+    <body>
+    	
+        <div id="massagebox"></div>
+        <input id="mynumber" type="number">&nbsp;&nbsp;
+        <button id="guessnumber">Guess the Number</button>
+        
+    	<script>
+			
+			var numberguessed;
+			var computerguess;
+			var computercorrect = false;
+			var numberoftry = 1;
+			document.getElementById("guessnumber").onclick = function () {
+				
+				computerguess = (Math.floor((Math.random() * 10)) +1 );
+				numberguessed = parseInt(document.getElementById("mynumber").value);
+				
+				if(numberguessed == computerguess)
+				{
+					alert("Yes! The computer guess your number " + numberguessed + " Correct");
+				}
+				else
+				{
+					//alert("No! The computer was wrong! It guessed " + computerguess );
+					while (computercorrect == false)
+					{
+						computerguess = (Math.floor((Math.random() * 10)) +1 );
+						alert("computer new guess is: " + computerguess );
+						numberoftry++;
+						if(numberguessed == computerguess)
+						{
+							computercorrect = true;
+							alert("computer guessed the number! It took " + numberoftry + " tries!" );
+						}
+					}
+				}
+				
+				
+				//alert("Number of Fingers Behind My Back: " + numberguessed);
+				//alert("computer guess: " + computerguess);
+			}
+			
+        </script>
+
+    </body>
+</html>

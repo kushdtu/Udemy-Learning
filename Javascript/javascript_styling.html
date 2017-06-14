@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    	<title>Javascript styling</title>
+        
+        <style>
+		
+			#box {
+				
+			  width:400px;
+			  height:400px;
+			  background-color:#A71A1D;
+			
+			}
+        </style>
+    </head>
+    
+    <body>
+    
+    	<div id="box"></div>
+        
+        <script>
+			
+			document.getElementById("box").onclick = function() {
+				document.getElementById("box").style.display = "none";
+			}
+			
+		</script>
+        
+    </body>
+</html>

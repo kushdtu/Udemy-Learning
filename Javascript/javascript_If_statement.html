@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    	<title>Javascript : If statement</title>
+        
+        <style>
+        </style>
+    </head>
+    
+    <body>
+    	
+        Enter a Number: <input type="number" id="MyFirstInput">
+        <br><br>
+        <button id="runTest">Test Number</button>
+    	<script>
+        	
+			var myVariable = parseInt(document.getElementById("MyFirstInput").value);
+			
+			document.getElementById("runTest").onclick = function()
+			{
+				
+				myVariable = parseInt(document.getElementById("MyFirstInput").value);
+				
+				if (myVariable == 100)
+				{
+					alert("Variable is 100:");
+				}
+				else if(myVariable == 200)
+				{
+					alert("variable is 200");
+				}
+				else
+				{
+					alert("variable is not 100! and 200");
+				}
+					
+			}
+			
+        </script>
+
+    </body>
+</html>

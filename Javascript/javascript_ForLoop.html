@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    	<title>Javascript!</title>
+        
+        <style>
+        </style>
+    </head>
+    
+    <body>
+    	
+        <div id="output"></div>
+        
+    	<script>
+			
+			var forLoopArray = ["circle ", "squere", "cars ", "cats " , "bicycles" , "houeses", "people"];
+			
+			var forLoopStatement= "<ul>";
+			
+			for (var x=0; x<forLoopArray.length; x++)
+			{
+				forLoopStatement = forLoopStatement + "<li>" + forLoopArray[x]+ "</li>";
+			}
+			
+			forLoopStatement = forLoopStatement + "</ul>";
+			
+			document.getElementById("output").innerHTML = forLoopStatement;
+			
+        </script>
+
+    </body>
+</html>

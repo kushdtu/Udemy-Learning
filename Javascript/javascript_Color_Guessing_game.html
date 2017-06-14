@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    	<title>Javascript Game: what color is the box</title>
+        
+        <style>
+			
+			#colorReturned {
+				width:200px;
+				height:200px;
+				display:none;
+			}
+			
+        </style>
+    </head>
+    
+    <body>
+    	
+        Guess a Color:
+        <select id="myColorGuess">
+          <option value="1">Red</option>
+          <option value="2">Orenge</option>
+          <option value="3">Yellow</option>
+        </select><br><br>
+        <button id="runtest">Guess the Color</button>
+        <div id="colorReturned"></div>
+        
+    	<script>
+        	
+			//alert(Math.floor(Math.random() ) );
+			
+			var myColor = document.getElementById("myColorGuess").value;
+			
+			document.getElementById("runtest").onclick = function()
+			{
+				myColor = document.getElementById("myColorGuess").value;
+				
+				var theColor = (Math.floor(Math.random() * 3)+1);
+				
+				//alert("user picked " + myColor);
+				//alert("computer picked " + theColor);
+				var theCorrectColor
+				
+				if (theColor == 1)
+				{
+					document.getElementById("colorReturned").style.display = "block";
+					document.getElementById("colorReturned").style.backgroundColor = "red";
+					theCorrectColor = "Red";
+					if (theColor==myColor)
+					{
+						alert("You are Correct! The Color was " + theCorrectColor);
+					}
+					else
+					{
+						alert("Sorry you are Wrong! The Color was " + theCorrectColor);
+					}
+				}
+				else if(theColor == 2)
+				{
+					document.getElementById("colorReturned").style.display = "block";
+					document.getElementById("colorReturned").style.backgroundColor = "orange";
+					theCorrectColor = "Orange";
+					if (theColor==myColor)
+					{
+						alert("You are Correct! The Color was " + theCorrectColor);
+					}
+					else
+					{
+						alert("Sorry you are Wrong! The Color was " + theCorrectColor);
+					}
+				}
+				else
+				{
+					document.getElementById("colorReturned").style.display = "block";
+					document.getElementById("colorReturned").style.backgroundColor = "yellow";
+					theCorrectColor = "Yellow";
+					if (theColor==myColor)
+					{
+						alert("You are Correct! The Color was " + theCorrectColor);
+					}
+					else
+					{
+						alert("Sorry you are Wrong! The Color was " + theCorrectColor);
+					}
+				}
+			}
+			
+			
+        </script>
+
+    </body>
+</html>
