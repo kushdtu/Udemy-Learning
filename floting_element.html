@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    	<title>CSS: Floating Element</title>
+        <style>
+			#header {
+				width:100%;
+				height:auto;
+				background-color:#000000;
+				color:#FFFFFF;
+				display:block;
+				text-align:center;
+			}
+			
+			#navigation {
+				width:20%;
+				background-color:#8510C9;
+				color:#D1E31D;
+				float:left;
+				display:inline-block;
+			}
+			
+			#content {
+				background-color:#ffffff;
+				color:#000000;
+				float:right;
+				width:80%;
+				text-align:center;
+				display:inline-block;
+			}
+			
+			#footer {
+				width:100%;
+				background-color:#000000;
+				color:#ffffff;
+				float:left;
+				display:block;
+			}
+		</style>
+        
+    </head>
+    
+    <body>
+    	<div id="header">
+        	<h1>This is the page header</h1>
+        </div>
+        
+        <div id="navigation">
+        	Item #1<br>
+        	Item #2<br>
+        	Item #3<br>
+        	Item #4
+        </div>
+        
+        <div id="content">
+        	<p>This is where we discribe content of the page</p>
+        </div>
+        
+        <div id="footer">
+        	<p>This is footer</p>
+        </div>
+    </body>
+</html>

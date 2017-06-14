@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    	<title>CSS Combinator</title>
+        <style>
+		
+		div p {
+			background-color:#DB1A3E;
+			width:100%;
+			height:150px;
+		}
+		
+		div > p {
+			background-color:#1C43D9;
+			width:100%;
+			height:150px;
+		}
+		
+		</style>
+        
+    </head>
+    
+    <body>
+    	<div>
+        	<p>This is first paragraph </p>
+            <article>
+            <p>This is first paragraph </p>
+            </article>
+        </div>
+        
+        <div>
+        	<p>This is second paragarph</p>
+            <article>
+            <p>This is first paragraph </p>
+            </article>
+        </div>
+    </body>
+</html>
